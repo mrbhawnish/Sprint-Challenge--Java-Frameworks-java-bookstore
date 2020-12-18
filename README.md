@@ -50,6 +50,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Can you explain exception handling in your application?
+  The  driving  class is for any exception that might occur from a request is handled inside RestExceptionHandler class. This class has the annotation @RestConntrollerAdvice which advices all of the controllers when an exception occurs. We also have two classes for ResourceFoundException and ResourceNotFoundException that are used when a resource is found or not instead of throwing usual EntityNotFoundException.
 2. Can you explain your user authentication flow?
 3. Can you show me your unit tests and describe how they work?
 4. Can you show how you deployed your application to a cloud service with a persistent database?
