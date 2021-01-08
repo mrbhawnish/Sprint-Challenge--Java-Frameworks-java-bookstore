@@ -49,9 +49,10 @@ public class ResourceServerConfig
                              "/swagger-resource/**",
                              "/swagger-ui.html",
                              "/v2/api-docs",
-                             "/webjars/**",
-                             "/createnewuser")
+                             "/webjars/**")
                 .permitAll()
+               .antMatchers("/books/books", "/books/book/**")
+               .hasAnyRole("ADMIN", "DATA")
                 .antMatchers("/users/**",
                              "/useremails/**",
                              "/oauth/revoke-token",

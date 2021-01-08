@@ -184,6 +184,7 @@ public class SeedData
                 .add(new Wrote(a6, new Book()));
         b1 = bookService.save(b1);
 
+
         Book b2 = new Book("Digital Fortess", "9788489367012", 2007, s1);
         b2.getWrotes()
                 .add(new Wrote(a2, new Book()));

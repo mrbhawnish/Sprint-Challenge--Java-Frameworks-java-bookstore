@@ -55,7 +55,7 @@ public class BookController
     }
 
     // POST http://localhost:2019/books/book
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_DATA')")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
     @PostMapping(value = "/book", consumes = "application/json")
     public ResponseEntity<?> addNewBook(@Valid @RequestBody Book newBook) throws
             URISyntaxException
