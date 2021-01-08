@@ -52,9 +52,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 1. Can you explain exception handling in your application?
   The  driving  class is for any exception that might occur from a request is handled inside RestExceptionHandler class. This class has the annotation @RestConntrollerAdvice which advices all of the controllers when an exception occurs. We also have two classes for ResourceFoundException and ResourceNotFoundException that are used when a resource is found or not instead of throwing usual EntityNotFoundException.
 2. Can you explain your user authentication flow?
+   Client applications request an access token adding the client id and secret to the API server once the user provides correct username and password, then gaining a unique access token allows a user to access projected resources, endpoints while being authenticated during that session.  After succesfully authenticating a user, we can authorize a particular client or restrict access by using roles authorities for that user.
 3. Can you show me your unit tests and describe how they work?
+   I have done unit tests for BookServiceImplTest where I have tested only an individual method in order test the business logic. In most of them I have simple wrote assertions in order to compare the outcomes with the expected results. 
 4. Can you show how you deployed your application to a cloud service with a persistent database?
-
+   First of all I added "local.run.db=POSTGRESQL or H2" along the DataSourceConfig file in order to switch between H2 or Postgresql database. Then I added a heroku-maven plugin and created the heroku app using heroku CLI. Also had to configure the env variables for the deployed app in order to work fine with the tokens.
 ## Instructions
 
 ### Task 1: Project Set Up
